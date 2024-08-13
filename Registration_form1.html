@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta tags for character set and responsive design -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        /* General styling for the body and form layout */
+        body {
+            background-color: rgb(171, 116, 107);
+            font-family: Arial, sans-serif;
+        }
+
+        form {
+            background: rgb(185, 170, 170);
+            padding: 20px;
+            border: 2px solid black;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 600px;
+            margin: 20px auto;
+        }
+
+        .box {
+            display: block;
+            width: calc(100% - 20px);
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        .button {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: #555e68;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin: 5px;
+        }
+
+        /* Styling for checkboxes and radio buttons */
+        .form-group input[type="checkbox"],
+        .form-group input[type="radio"] {
+            margin-right: 10px;
+        }
+
+        .form-group .checkbox-item {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Main heading for the form -->
+    <h1 id="p1">Hello!!<br> Students, please fill out the form below.</h1>
+
+    <form>
+        <!-- Form fields for user information -->
+        <div class="form-group">
+            <label for="username">Enter User Name:</label>
+            <input class="box" type="text" id="username" name="username" placeholder="Enter Name">
+        </div>
+
+        <div class="form-group">
+            <label for="password">Enter Password:</label>
+            <input class="box" type="password" id="password" name="password" placeholder="Enter Password">
+        </div>
+
+        <div class="form-group">
+            <label for="age">Enter Age:</label>
+            <input class="box" type="number" id="age" name="age" placeholder="Enter Age">
+        </div>
+
+        <div class="form-group">
+            <label for="address">Enter Address:</label>
+            <textarea class="box" id="address" name="address" rows="3" placeholder="Enter your Address"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="dob">Select DOB:</label>
+            <input class="box" type="date" id="dob" name="dob">
+        </div>
+
+        <!-- Checkbox options for course selection -->
+        <div class="form-group">
+            <label>Select Course:</label>
+            <div class="checkbox-item">
+                <input type="checkbox" id="java" name="course" value="java">
+                <label for="java">JAVA</label>
+            </div>
+            <div class="checkbox-item">
+                <input type="checkbox" id=".net" name="course" value=".net">
+                <label for=".net">.NET</label>
+            </div>
+            <!-- More checkbox items here -->
+        </div>
+
+        <!-- Radio buttons for gender selection -->
+        <div class="form-group">
+            <label>Select Gender:</label>
+            <div class="checkbox-item">
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male">Male</label>
+            </div>
+            <div class="checkbox-item">
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Female</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="pic">Upload Pic:</label>
+            <input class="box" type="file" id="pic" name="pic">
+        </div>
+
+        <div class="form-group">
+            <label for="qualification">Select Qualification:</label>
+            <select id="qualification" name="qualification">
+                <option value="BE">BE</option>
+                <option value="B.Tech">B.Tech</option>
+                <option value="CS">CS</option>
+            </select>
+        </div>
+
+        <!-- Buttons for form submission, additional actions, and resetting -->
+        <div class="form-group">
+            <input class="button" type="submit" value="Submit">
+            <input class="button" type="button" value="Button">
+            <input class="button" type="reset" value="Reset">
+        </div>
+    </form>
+</body>
+</html>
