@@ -1,0 +1,192 @@
+<!--Assignment No 2--> 
+  <!--Build Registration Form using HTML and CSS -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2_Registration Form</title>
+    <style>
+        body {
+            background-color: rgb(171, 116, 107);
+            font-family: Arial, sans-serif;
+        }
+
+        #p1 {
+            text-align: center;
+            color: rgb(10, 7, 7);
+            margin-top: 20px;
+        }
+
+        form {
+            text-align: left;
+            color: black;
+            background: rgb(185, 170, 170);
+            padding: 20px;
+            border: 2px solid black;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 600px;
+            margin: 20px auto;
+        }
+
+        .box {
+            display: block;
+            width: calc(100% - 20px);
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        .box:focus {
+            border-color: #007bff;
+            outline: none;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+        }
+
+        textarea.box {
+            resize: vertical;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            text-align: center;
+            text-decoration: none;
+            color: white;
+            background-color: #555e68;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: background-color 0.3s, box-shadow 0.3s;
+            margin: 5px;
+        }
+
+        .button:hover {
+            background-color: #444;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .form-group input[type="checkbox"],
+        .form-group input[type="radio"] {
+            margin-right: 10px;
+        }
+
+        .form-group .checkbox-item {
+            margin-bottom: 10px; /* Space between checkboxes */
+        }
+
+        .form-group select {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1 id="p1">Hello!!<br> Students, please fill out the form below.</h1>
+
+    <form>
+        <div class="form-group">
+            <label for="username">Enter User Name:</label>
+            <input class="box" type="text" id="t1" name="username" placeholder="Enter Name">
+        </div>
+
+        <div class="form-group">
+            <label for="password">Enter Password:</label>
+            <input class="box" type="password" id="password" name="password" placeholder="Enter Password">
+        </div>
+
+        <div class="form-group">
+            <label for="age">Enter Age:</label>
+            <input class="box" type="number" id="age" name="age" placeholder="Enter Age">
+        </div>
+
+        <div class="form-group">
+            <label for="address">Enter Address:</label>
+            <textarea class="box" id="address" name="address" rows="3" placeholder="Enter your Address"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="dob">Select DOB:</label>
+            <input class="box" type="date" id="dob" name="dob">
+        </div>
+        <br><br>
+
+        <div class="form-group">
+            <label>Select Course:</label>
+            <div class="checkbox-item">
+                <input type="checkbox" id="java" name="course" value="java">
+                <label for="java">JAVA</label>
+            </div>
+            <div class="checkbox-item">
+                <input type="checkbox" id=".net" name="course" value=".net">
+                <label for=".net">.NET</label>
+            </div>
+            <div class="checkbox-item">
+                <input type="checkbox" id="ang" name="course" value="Angular">
+                <label for="ang">Angular</label>
+            </div>
+            <div class="checkbox-item">
+                <input type="checkbox" id="py" name="course" value="Python">
+                <label for="py">Python</label>
+            </div>
+            <div class="checkbox-item">
+                <input type="checkbox" id="rj" name="course" value="Reactjs">
+                <label for="rj">Reactjs</label>
+            </div>
+        </div><br><br>
+
+        <div class="form-group">
+            <label>Select Gender:<br></label>
+            <div class="checkbox-item">
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male">Male</label>
+            </div>
+            <div class="checkbox-item">
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Female</label>
+            </div>
+        </div>
+        <br><br>
+        <div class="form-group">
+            <label for="pic">Upload Pic:</label>
+            <input class="box" type="file" id="pic" name="pic">
+        </div>
+
+        <div class="form-group">
+            <label for="qualification">Select Qualification:</label>
+            <select id="qualification" name="qualification">
+                <option value="BE">BE</option>
+                <option value="B.Tech">B.Tech</option>
+                <option value="CS">CS</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <input class="button" type="submit" value="Submit">
+            <button>SUBMIT</button>
+            <input class="button" type="button" value="Button">
+            <input class="button" type="reset" value="Reset">
+        </div>
+    </form>
+</body>
+</html>
